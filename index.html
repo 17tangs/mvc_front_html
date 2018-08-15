@@ -24,7 +24,7 @@
         width: 100%;
         background: #FFFFFF;
         position: fixed;
-        z-index: 1;
+        z-index: 10;
         top: 0;
     }
 
@@ -32,6 +32,8 @@
         width: 100%;
         height: 100%;
         margin: 0 auto;
+        display:flex;
+        justify-content: space-between;
     }
 
     .med {
@@ -48,63 +50,93 @@
         display: inline-block;
         line-height: 64px;
     }
-
-    .share {
-        margin-right:20px;
-        float: right;
+    .lang:hover{
+        text-decoration: underline;
+        color: rgba(0, 102, 204, 1);
+    }
+    .bdsharebuttonbox {
+        width: 248px;
+        display:flex;
+        justify-content: space-between;
+    }
+    #share {
+        margin-right:12px;
         height: 64px;
         display: inline-block;
     }
-
-    .share a {
-        width: 34px;
-        height: 34px;
-        border-radius: 34px;
+    #share a{
+        width: 32.8px;
+        height: 32.8px;
+        border-radius: 32.8px;
         display: inline-block;
-        margin-left: 10px;
+        margin-left: 8px;
+        margin-right:8px;
         margin-top: 15px;
     }
-
-    .share img {
+    #share a.bds_weixin{
+        display:flex;
+        justify-content: center;
+        background: rgb(0,0,0,0);
+    }
+    #share img {
         margin: 0 auto;
         margin-top: 10px;
         display: block;
     }
 
-    .share1 {
-        background: #2dc100;
+    #share a.share1{
+        background-color: #2dc100;
     }
-
-    .share2 {
+    #share a.share1 img{
+        height:14px;
+        width:20px;
+    }
+    #share a.share2 {
         background: #eb192d;
     }
 
-    .share3 {
+    #share a.share3 {
         background: #2f4d9e;
     }
 
-    .share4 {
+    #share a.share4 {
         background: #569ed5;
     }
 
-    .share5 {
+    #share a.share5 {
         background: #117dc2;
     }
 
+    #share a.bds_more {
+        display: none;
+    }
+
+
     .medmain {
-        width: 1500px;
-        margin-top: 64px;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 74px;
+        display:flex;
+        flex-direction:column;
     }
 
     .banner {
-        background: url(img/bg.jpg) no-repeat;
-        background-size: 100%;
-        height: 656px;
-        overflow: hidden;
+        position:relative;
+        height: 600px;
     }
+    #banner{
+        position:absolute;
+        top:0px;
+        width:100%;
+        height:600px;
+        margin:0;
+        background: url(img/bg.jpg) no-repeat;
+        background-position: center top;
+        background-size: auto 140%;
+
+    }
+
 
     .banner img {
         display: block;
@@ -124,11 +156,12 @@
         overflow: hidden;
         text-align: center;
         margin: 150px auto;
+        margin-bottom: 0px;
         overflow: hidden;
     }
 
     .medlang {
-        height: 151px;
+        height: 150px;
         overflow: hidden;
     }
 
@@ -187,9 +220,11 @@
 
 
     .med1 {
-        font-size: 58px;
+        font-size: 65px;
+        text-align:center;
         font-weight: 700;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+
     }
 
     .med2 {
@@ -388,11 +423,11 @@
     }
 
     .state2 {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .state3 {
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .main22 {
@@ -514,7 +549,7 @@
     .foot .message {
         margin-right:20px;
         cursor: pointer;
-        color: #0066CC;
+        color: rgba(0, 102, 204, 1);
     }
     .feedback{
         z-index:3;
@@ -573,25 +608,69 @@
         display:flex;
         align-items:center;
     }
+    .wechatShare{
+        border: 1px solid rgb(216, 216, 216);
+        position:absolute;
+        top: 80px;
+        right: 95px;
+        width:240px;
+        height: 275px;
+        display:flex;
+        padding: 10px;
+        flex-direction: column;
+        background:#FFF;
+        align-items:center;
+        z-index:4;
+        display:none;
+    }
+    .wechatShare .popup_head{
+        font-weight:700;
+        font-size:12px;
+        width:240px;
+        height:16px;
+    }
+    .wechatShare .popup_foot{
+        margin-top:5px;
+        width:240px;
+        height:44px;
+        font-size:12px;
+        color: rgb(102,102,102);
+
+    }
     </style>
 </head>
 
 <body>
     <div class="head">
         <div class="headtop">
-            <a href="index.html" class="med headerLogo"><img style='height:32.8px; width:166.8px; margin-left:20px; ' src="img/logo.png"></a>
-            <a href="javascript:void(0)" class="lang">中文/Eng</a>
-            <span class="share">
-                <a target="popup" onclick="window.open('wechatShare.html','name','width=800,height=600')"  class="share1"><img src="img/share1.png"></a>
-                <a target="popup" onclick="window.open('http://service.weibo.com/share/share.php?url=https%3A//fiw72o.axshare.com&appkey=&title=Description&pic=&ralateUid=&language=zh_cn','name','width=800,height=600')"  class="share2"><img src="img/share2.png"></a>
-                <a target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A//fiw72o.axshare.com','name','width=800,height=600')"  class="share3"><img src="img/share3.png"></a>
-                <a target="popup" onclick="window.open('https://twitter.com/home?status=https%3A//fiw72o.axshare.com','name','width=800,height=600')"  class="share4"><img src="img/share4.png"></a>
-                <a target="popup" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https%3A//fiw72o.axshare.com&title=Medvision%20Cloud&summary=&source=','name','width=800,height=600')"  class="share5"><img src="img/share5.png"></a>
-            </span>
+            <div class="headerLogo">
+                <a href="index.html"><img title="返回首页" style='height:32.8px; width:166.8px; margin-left:20px; ' src="img/logo.png"></a>
+                <a title="switch to English" href="javascript:void(0)" class="lang">中文/Eng</a>
+            </div>
+            <div id="share">
+                <div class="bdsharebuttonbox" >
+                    <a href="#" class="bds_weixin share1" id="wechat" ><img src="img/share1.png"></a>
+                    <a href="http://service.weibo.com/share/share.php?url=http://medvisioncloud.com&appkey=&title=Description&pic=&ralateUid=&language=zh_cn#_loginLayer_1534360232084" target = "_blank" class="share2" ><img src="img/share2.png"></a>
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//medvisioncloud.com" class="share3" ><img src="img/share3.png"></a>
+                    <a target="_blank" href="https://twitter.com/home?status=http%3A//medvisioncloud.com" class="share4" ><img src="img/share4.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//medvisioncloud.com&title=Medvision%20Cloud&summary=&source=" class="share5"> <img src="img/share5.png"></a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="medmain">
+        <div class="wechatShare">
+            <div class="popup_head">
+                <span>分享到微信朋友圈</span>
+            </div>
+            <img style='height:215px; width:215px' src="img/QR.png">
+            <div class="popup_foot">
+                打开微信，点击底部的“发现”，<br>
+                使用“扫一扫”即可将网页分享至朋友圈。
+            </div>
+        </div>
         <div class="banner">
+            <div id="banner">
             <div class="banner2">
                 <p class="med1">MedVisionCloud</p>
                 <div class="medlang">
@@ -621,33 +700,6 @@
                             <p class="med3">免费的在线乳腺影像判读AI 由人工智能提供参考意见</p>
                         </div>
             		</div>
-
-
-                    <!-- <div class="langdiv">
-                        <div class="eng langtext">
-                            <p class="med2">Advancing Women's Healthcare with AI</p>
-                            <p class="med3">Free Online Mammograms Interpretation using AI Suggestions for reference only</p>
-                        </div>
-                        <div class="fren langtext">
-                            <p class="med2">Faire progresser la santé des femmes avec l'IA</p>
-                            <p class="med3">Interprétation gratuite de mammogrammes en ligne en utilisant des suggestions d'IA pour la référence seulement</p>
-                        </div>
-                        <div class="spanish langtext">
-                            <p class="med2">Avanzando en la salud de la mujer con IA</p>
-                            <p class="med3">Interpretación gratuita de mamografías en línea usando sugerencias de IA solo como referencia</p>
-                        </div>
-                        <div class="Russian langtext">
-                            <p class="med2">Продвижение женского здравоохранения с помощью ИИ</p>
-                            <p class="med3">Бесплатные онлайн-маммограммы Интерпретация с использованием предложений AI для справки</p>
-                        </div>
-                        <div class="Arabic langtext">
-                            <p class="med2">تعزيز الرعاية الصحية للمرأة مع منظمة العفو الدولية</p>
-                            <p class="med3">تفسير الماموغرافيا على الانترنت مجانا باستخدام الاقتراحات الذكاء الاصطناعي للإشارة فقط</p>
-                        </div>
-                        <div class="china langtext">
-                            <p class="med2">女性健康医视云 —— 用AI，爱自己</p>
-                            <p class="med3">免费的在线乳腺影像判读AI 由人工智能提供参考意见</p>
-                        </div> -->
                     </div>
                 </div>
                 <div class="med4">
@@ -768,6 +820,12 @@
         setTimeout('$(".shadow").hide();', 2000);
     }
     $(function() {
+        $('#wechat').mouseover(function(){
+            $(".wechatShare").css('display', 'flex');
+        })
+        $('#wechat').mouseout(function(){
+            $(".wechatShare").hide();
+        })
         $('#contact').submit(function () {
          sendContactForm();
          //$("#contact").reset();
