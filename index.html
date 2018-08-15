@@ -29,7 +29,8 @@
     }
 
     .headtop {
-        width: 1500px;
+        width: 100%;
+        height: 100%;
         margin: 0 auto;
     }
 
@@ -49,6 +50,7 @@
     }
 
     .share {
+        margin-right:20px;
         float: right;
         height: 64px;
         display: inline-block;
@@ -493,23 +495,24 @@
     }
 
     .footline {
-        width: 1500px;
+        width:100%;
+        display:flex;
+        justify-content: space-between;
         margin: 0 auto;
     }
 
     .foot .banquan {
         display: inline-block;
-        margin-left: 140px;
+        margin-left: 20px;
     }
 
     .foot .fonttext {
-        display: inline-block;
-        margin-left: 160px;
+        margin-right:154px;
+
     }
 
     .foot .message {
-        display: inline-block;
-        margin-left: 250px;
+        margin-right:20px;
         cursor: pointer;
         color: #0066CC;
     }
@@ -565,14 +568,18 @@
     	80% { opacity: 0; }
         100% { opacity: 0; }
     }
+    .headerLogo{
+        height:100%;
+        display:flex;
+        align-items:center;
+    }
     </style>
 </head>
 
 <body>
-
     <div class="head">
         <div class="headtop">
-            <a href="index.html" class="med"><img src="img/logo.png"></a>
+            <a href="index.html" class="med headerLogo"><img style='height:32.8px; width:166.8px; margin-left:20px; ' src="img/logo.png"></a>
             <a href="javascript:void(0)" class="lang">中文/Eng</a>
             <span class="share">
                 <a target="popup" onclick="window.open('wechatShare.html','name','width=800,height=600')"  class="share1"><img src="img/share1.png"></a>
