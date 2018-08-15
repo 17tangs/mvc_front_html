@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>华建医视云</title>
+    <meta name="keywords" content="华建医视云">
+    <meta name="description" content="华建医视云">
     <style type="text/css">
     * {
         margin: 0;
@@ -45,45 +47,13 @@
         line-height: 64px;
     }
 
-    .share {
+    .bdsharebuttonbox {
         float: right;
-        height: 64px;
-        display: inline-block;
-    }
-
-    .share a {
-        width: 34px;
-        height: 34px;
-        border-radius: 34px;
-        display: inline-block;
-        margin-left: 10px;
-        margin-top: 15px;
-    }
-
-    .share img {
-        margin: 0 auto;
         margin-top: 10px;
-        display: block;
     }
 
-    .share1 {
-        background: #2dc100;
-    }
-
-    .share2 {
-        background: #eb192d;
-    }
-
-    .share3 {
-        background: #2f4d9e;
-    }
-
-    .share4 {
-        background: #569ed5;
-    }
-
-    .share5 {
-        background: #117dc2;
+    .bds_more {
+        display: none;
     }
 
     .medmain {
@@ -126,7 +96,6 @@
         height: 151px;
         overflow: hidden;
     }
-
     /*.eng {
         transition-duration: 1000s;
         transform-origin: 50% 50%;
@@ -236,7 +205,7 @@
         display: none;
     }
 
-    .langselect .china {
+    .langselect .chinatext {
         display: inline-block;
         text-decoration: none;
         width: 105px;
@@ -269,7 +238,6 @@
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
         color: #0066CC;
     }
-
 
     .banner3 {
         display: inline-block;
@@ -523,6 +491,11 @@
         margin-left: 250px;
         cursor: pointer;
         color: #0066CC;
+        text-decoration: none;
+    }
+
+    .foot .message:hover {
+        text-decoration: underline;
     }
     </style>
 </head>
@@ -532,7 +505,14 @@
         <div class="headtop">
             <a href="index.html" class="med"><img src="img/logo.png"></a>
             <a href="javascript:void(0)" class="lang">中文/Eng</a>
-            <span class="share"><a href="#" class="share1"><img src="img/share1.png"></a><a href="#" class="share2"><img src="img/share2.png"></a><a href="#" class="share3"><img src="img/share3.png"></a><a href="#" class="share4"><img src="img/share4.png"></a><a href="#" class="share5"><img src="img/share5.png"></a></span>
+            <div class="bdsharebuttonbox">
+                <a href="#" class="bds_more" data-cmd="more"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+                <a href="#" class="bds_fbook" data-cmd="fbook"></a>
+                <a href="#" class="bds_twi" data-cmd="twi"></a>
+                <a href="#" class="bds_linkedin" data-cmd="linkedin"></a>
+            </div>
         </div>
     </div>
     <div class="medmain">
@@ -541,27 +521,27 @@
                 <p class="med1">MedVisionCloud</p>
                 <div class="medlang">
                     <div class="langdiv">
-                        <div class="eng langtext">
+                        <div class="lang0 langtext">
                             <p class="med2">Advancing Women's Healthcare with AI</p>
                             <p class="med3">Free Online Mammograms Interpretation using AI Suggestions for reference only</p>
                         </div>
-                        <div class="fren langtext">
+                        <div class="lang1 langtext">
                             <p class="med2">Faire progresser la santé des femmes avec l'IA</p>
                             <p class="med3">Interprétation gratuite de mammogrammes en ligne en utilisant des suggestions d'IA pour la référence seulement</p>
                         </div>
-                        <div class="spanish langtext">
+                        <div class="lang2 langtext">
                             <p class="med2">Avanzando en la salud de la mujer con IA</p>
                             <p class="med3">Interpretación gratuita de mamografías en línea usando sugerencias de IA solo como referencia</p>
                         </div>
-                        <div class="Russian langtext">
+                        <div class="lang3 langtext">
                             <p class="med2">Продвижение женского здравоохранения с помощью ИИ</p>
                             <p class="med3">Бесплатные онлайн-маммограммы Интерпретация с использованием предложений AI для справки</p>
                         </div>
-                        <div class="Arabic langtext">
+                        <div class="lang4 langtext">
                             <p class="med2">تعزيز الرعاية الصحية للمرأة مع منظمة العفو الدولية</p>
                             <p class="med3">تفسير الماموغرافيا على الانترنت مجانا باستخدام الاقتراحات الذكاء الاصطناعي للإشارة فقط</p>
                         </div>
-                        <div class="china langtext">
+                        <div class="lang5 langtext">
                             <p class="med2">女性健康医视云 —— 用AI，爱自己</p>
                             <p class="med3">免费的在线乳腺影像判读AI 由人工智能提供参考意见</p>
                         </div>
@@ -573,7 +553,7 @@
                         <span>START HERE</span>
                     </div>
                     <div class="langselect">
-                        <a class="china" href="inter.html">中文</a><a class="english" href="inter.html">英文</a>
+                        <a class="chinatext" href="inter.html">中文</a><a class="english" href="inter.html">英文</a>
                     </div>
                 </div>
             </div>
@@ -636,25 +616,57 @@
     </div>
     <div class="foot">
         <div class="footline">
-            <span class="banquan">Copyright©2018 MedVisionCloud</span><span class="fonttext">感谢 Dr Lotus AI 医疗影像人工智能判读引擎 提供技术支持</span><span class="message">留言反馈</span></div>
+            <span class="banquan">Copyright©2018 MedVisionCloud</span><span class="fonttext">感谢 Dr Lotus AI 医疗影像人工智能判读引擎 提供技术支持</span><a href="javascript:void(0)" class="message">留言反馈</a></div>
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
+    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} };
+    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+
     var langindex = 0;
-    window.setInterval(looptext, 3000);
+    window.setInterval(looptext, 3500);
+
     function looptext() {
-        console.log($(".langdiv").children().length);
         $(".langtext").hide();
-        $(".langdiv div").eq(langindex).show();
-        $(".langdiv div").eq(langindex).animate({height:"300px"});
-        //console.log($(".langdiv div").attr("class");
+        $(".lang" + langindex).show();
+        var langup1 = {
+            '-webkit-transform': "rotateX(180deg)",
+            '-moz-transform': "rotateX(180deg)",
+            '-ms-transform': "rotateX(180deg)",
+            '-o-transform': "rotateX(180deg)",
+            'transform': "rotateX(180deg)"
+        };
+        $(".lang" + langindex).css(langup1);
+
+        var langtr1 = {
+            '-webkit-transition-duration': '1000ms',
+            'transition-duration': '1000ms'
+        };
+        $(".lang" + langindex).css(langtr1);
+
+        $(".lang" + (langindex + 1)).show();
+        var langdw2 = {
+            '-webkit-transform': "rotateX(180deg)",
+            '-moz-transform': "rotateX(180deg)",
+            '-ms-transform': "rotateX(180deg)",
+            '-o-transform': "rotateX(180deg)",
+            'transform': "rotateX(180deg)"
+        };
+        $(".lang" + (langindex + 1)).css(langdw2);
+
+        var langtr2 = {
+            '-webkit-transition-duration': '1000ms',
+            'transition-duration': '1000ms'
+        };
+        $(".lang" + (langindex + 1)).css(langtr2);
+
         if (langindex == 5) {
             langindex = 0;
         }
         langindex++;
-        console.log(langindex);
     }
     $(function() {
+
         $(".main1").mouseover(function() {
             $(".main1info ").hide();
             $(".main1back ").show();
@@ -695,16 +707,17 @@
             $(".langselect").hide();
             $(".starthere").show();
         });
-        $(".china").mouseover(function() {
-            $(".china").css("color", "#FFFFFF");
+        $(".chinatext").mouseover(function() {
+            $(".chinatext").css("color", "#FFFFFF");
+            $(".chinatext").css("background", "rgba(0, 102, 204, 1)");
             $(".english ").css("color", "#0066CC");
             $(".english").css("background", "#FFFFFF");
         });
         $(".english").mouseover(function() {
             $(".english ").css("color", "#FFFFFF");
             $(".english").css("background", "rgba(0, 102, 204, 1)");
-            $(".china ").css("color", "#0066CC");
-            $(".china").css("background", "#FFFFFF");
+            $(".chinatext ").css("color", "#0066CC");
+            $(".chinatext").css("background", "#FFFFFF");
         });
     })
     </script>
