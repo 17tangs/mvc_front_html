@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>华建医视云</title>
-    <meta name="keywords" content="华建医视云">
-    <meta name="description" content="华建医视云">
+    <link rel="stylesheet" type="text/css" href="./css/contactStyle.css">
     <style type="text/css">
     * {
         margin: 0;
@@ -13,6 +12,8 @@
     }
 
     body {
+        width:100%;
+        height:100%;
         font-family: 'Arial Negreta', 'Arial';
         font-size: 14px;
         background: #f2f2f2;
@@ -47,13 +48,45 @@
         line-height: 64px;
     }
 
-    .bdsharebuttonbox {
+    .share {
         float: right;
-        margin-top: 10px;
+        height: 64px;
+        display: inline-block;
     }
 
-    .bds_more {
-        display: none;
+    .share a {
+        width: 34px;
+        height: 34px;
+        border-radius: 34px;
+        display: inline-block;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+
+    .share img {
+        margin: 0 auto;
+        margin-top: 10px;
+        display: block;
+    }
+
+    .share1 {
+        background: #2dc100;
+    }
+
+    .share2 {
+        background: #eb192d;
+    }
+
+    .share3 {
+        background: #2f4d9e;
+    }
+
+    .share4 {
+        background: #569ed5;
+    }
+
+    .share5 {
+        background: #117dc2;
     }
 
     .medmain {
@@ -96,31 +129,19 @@
         height: 151px;
         overflow: hidden;
     }
-    /*.eng {
-        transition-duration: 1000s;
-        transform-origin: 50% 50%;
-        animation: scrollText 2s infinite
-    }
 
-    @keyframes scrollText {
-        0% {
-            transform: rotateX(0deg);
-        }
-
-        100% {
-            transform: rotateX(180deg);
-        }
-    }*/
-    /*.langdiv {
+    .langdiv {
         -webkit-animation: scrollText 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite;
         animation: scrollText 15s cubic-bezier(0.645, 0.045, 0.355, 1) infinite
-    }*/
+    }
 
     .langtext {
         overflow: hidden;
         height: 151px;
+        word-break:break-all;
     }
-    /*@-webkit-keyframes scrollText {
+
+    @-webkit-keyframes scrollText {
         0% {
             -webkit-transform: translateY(0px);
         }
@@ -161,7 +182,7 @@
             transform: translateY(-755px);
         }
     }
-*/
+
 
     .med1 {
         font-size: 58px;
@@ -205,7 +226,7 @@
         display: none;
     }
 
-    .langselect .chinatext {
+    .langselect .china {
         display: inline-block;
         text-decoration: none;
         width: 105px;
@@ -238,6 +259,7 @@
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
         color: #0066CC;
     }
+
 
     .banner3 {
         display: inline-block;
@@ -459,15 +481,14 @@
     }
 
     .foot {
+        margin-top:75px;
         font-size: 14px;
         font-weight: 400;
         color: #333333;
         overflow: hidden;
         width: 100%;
-        background: #FFFFFF;
-        position: fixed;
-        bottom: 0px;
-        height: 64px;
+        background: #f2f2f2;
+        border-top: 1.5px solid #BBB;
         line-height: 64px;
     }
 
@@ -491,28 +512,75 @@
         margin-left: 250px;
         cursor: pointer;
         color: #0066CC;
-        text-decoration: none;
+    }
+    .feedback{
+        z-index:3;
+        position:fixed;
+    }
+    .shadow{
+        width:100%;
+        height:1500px;
+        position:absolute;
+        top:0;
+        left:0;
+        background:rgba(0,0,0,0.5);
+        display:none;
+        z-index:2;
+    }
+    .message:hover{
+        text-decoration:underline;
+    }
+    .rw-words div{
+    	position: absolute;
+        left:0;
+        opacity: 0;
+    	overflow: hidden;
+    	width: 100%;
     }
 
-    .foot .message:hover {
-        text-decoration: underline;
+    .rw-words-1 div{
+    	animation: rotateWordsFirst 18s linear infinite 0s;
+    }
+    .rw-words div:nth-child(2) {
+    	animation-delay: 3s;
+    }
+    .rw-words div:nth-child(3) {
+    	animation-delay: 6s;
+    }
+    .rw-words div:nth-child(4) {
+    	animation-delay: 9s;
+    }
+    .rw-words div:nth-child(5) {
+    	animation-delay: 12s;
+    }
+    .rw-words div:nth-child(6) {
+    	animation-delay: 15s;
+    }
+    @keyframes rotateWordsFirst {
+        0% { opacity: 0; }
+        2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+    	5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
+        17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
+    	20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
+    	80% { opacity: 0; }
+        100% { opacity: 0; }
     }
     </style>
 </head>
 
 <body>
+
     <div class="head">
         <div class="headtop">
             <a href="index.html" class="med"><img src="img/logo.png"></a>
             <a href="javascript:void(0)" class="lang">中文/Eng</a>
-            <div class="bdsharebuttonbox">
-                <a href="#" class="bds_more" data-cmd="more"></a>
-                <a href="#" class="bds_weixin" data-cmd="weixin"></a>
-                <a href="#" class="bds_tsina" data-cmd="tsina"></a>
-                <a href="#" class="bds_fbook" data-cmd="fbook"></a>
-                <a href="#" class="bds_twi" data-cmd="twi"></a>
-                <a href="#" class="bds_linkedin" data-cmd="linkedin"></a>
-            </div>
+            <span class="share">
+                <a target="popup" onclick="window.open('wechatShare.html','name','width=800,height=600')"  class="share1"><img src="img/share1.png"></a>
+                <a target="popup" onclick="window.open('http://service.weibo.com/share/share.php?url=https%3A//fiw72o.axshare.com&appkey=&title=Description&pic=&ralateUid=&language=zh_cn','name','width=800,height=600')"  class="share2"><img src="img/share2.png"></a>
+                <a target="popup" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https%3A//fiw72o.axshare.com','name','width=800,height=600')"  class="share3"><img src="img/share3.png"></a>
+                <a target="popup" onclick="window.open('https://twitter.com/home?status=https%3A//fiw72o.axshare.com','name','width=800,height=600')"  class="share4"><img src="img/share4.png"></a>
+                <a target="popup" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&url=https%3A//fiw72o.axshare.com&title=Medvision%20Cloud&summary=&source=','name','width=800,height=600')"  class="share5"><img src="img/share5.png"></a>
+            </span>
         </div>
     </div>
     <div class="medmain">
@@ -520,31 +588,59 @@
             <div class="banner2">
                 <p class="med1">MedVisionCloud</p>
                 <div class="medlang">
-                    <div class="langdiv">
-                        <div class="lang0 langtext">
+                    <div class="rw-words rw-words-1">
+                        <div class="eng langtext">
                             <p class="med2">Advancing Women's Healthcare with AI</p>
                             <p class="med3">Free Online Mammograms Interpretation using AI Suggestions for reference only</p>
                         </div>
-                        <div class="lang1 langtext">
+                        <div class="fren langtext">
                             <p class="med2">Faire progresser la santé des femmes avec l'IA</p>
                             <p class="med3">Interprétation gratuite de mammogrammes en ligne en utilisant des suggestions d'IA pour la référence seulement</p>
                         </div>
-                        <div class="lang2 langtext">
+                        <div class="spanish langtext">
                             <p class="med2">Avanzando en la salud de la mujer con IA</p>
                             <p class="med3">Interpretación gratuita de mamografías en línea usando sugerencias de IA solo como referencia</p>
                         </div>
-                        <div class="lang3 langtext">
+                        <div class="Russian langtext">
                             <p class="med2">Продвижение женского здравоохранения с помощью ИИ</p>
                             <p class="med3">Бесплатные онлайн-маммограммы Интерпретация с использованием предложений AI для справки</p>
                         </div>
-                        <div class="lang4 langtext">
+                        <div class="Arabic langtext">
                             <p class="med2">تعزيز الرعاية الصحية للمرأة مع منظمة العفو الدولية</p>
                             <p class="med3">تفسير الماموغرافيا على الانترنت مجانا باستخدام الاقتراحات الذكاء الاصطناعي للإشارة فقط</p>
                         </div>
-                        <div class="lang5 langtext">
+                        <div class="langtext">
                             <p class="med2">女性健康医视云 —— 用AI，爱自己</p>
                             <p class="med3">免费的在线乳腺影像判读AI 由人工智能提供参考意见</p>
                         </div>
+            		</div>
+
+
+                    <!-- <div class="langdiv">
+                        <div class="eng langtext">
+                            <p class="med2">Advancing Women's Healthcare with AI</p>
+                            <p class="med3">Free Online Mammograms Interpretation using AI Suggestions for reference only</p>
+                        </div>
+                        <div class="fren langtext">
+                            <p class="med2">Faire progresser la santé des femmes avec l'IA</p>
+                            <p class="med3">Interprétation gratuite de mammogrammes en ligne en utilisant des suggestions d'IA pour la référence seulement</p>
+                        </div>
+                        <div class="spanish langtext">
+                            <p class="med2">Avanzando en la salud de la mujer con IA</p>
+                            <p class="med3">Interpretación gratuita de mamografías en línea usando sugerencias de IA solo como referencia</p>
+                        </div>
+                        <div class="Russian langtext">
+                            <p class="med2">Продвижение женского здравоохранения с помощью ИИ</p>
+                            <p class="med3">Бесплатные онлайн-маммограммы Интерпретация с использованием предложений AI для справки</p>
+                        </div>
+                        <div class="Arabic langtext">
+                            <p class="med2">تعزيز الرعاية الصحية للمرأة مع منظمة العفو الدولية</p>
+                            <p class="med3">تفسير الماموغرافيا على الانترنت مجانا باستخدام الاقتراحات الذكاء الاصطناعي للإشارة فقط</p>
+                        </div>
+                        <div class="china langtext">
+                            <p class="med2">女性健康医视云 —— 用AI，爱自己</p>
+                            <p class="med3">免费的在线乳腺影像判读AI 由人工智能提供参考意见</p>
+                        </div> -->
                     </div>
                 </div>
                 <div class="med4">
@@ -553,7 +649,7 @@
                         <span>START HERE</span>
                     </div>
                     <div class="langselect">
-                        <a class="chinatext" href="inter.html">中文</a><a class="english" href="inter.html">英文</a>
+                        <a class="china" href="inter.html">中文</a><a class="english" href="inter.html">英文</a>
                     </div>
                 </div>
             </div>
@@ -616,57 +712,69 @@
     </div>
     <div class="foot">
         <div class="footline">
-            <span class="banquan">Copyright©2018 MedVisionCloud</span><span class="fonttext">感谢 Dr Lotus AI 医疗影像人工智能判读引擎 提供技术支持</span><a href="javascript:void(0)" class="message">留言反馈</a></div>
+            <span class="banquan">Copyright©2018 MedVisionCloud</span><span class="fonttext">感谢 Dr Lotus AI 医疗影像人工智能判读引擎 提供技术支持</span><span id="feedbackButton" class="message">留言反馈</span></div>
     </div>
+    <div class="shadow">
+    </div>
+    <div class="feedback">
+        <div class="container">
+            <div class="feedbackHeader">
+                <h3>告诉我们你的想法</h3>
+            </div>
+                <div class="contactContainer">
+                <form id="contact" method="POST">
+                    <div class="name">
+                        <fieldset class="first">
+                            <input placeholder="姓" id="name1" type="text" tabindex="1" required maxlength="20">
+                        </fieldset>
+                        <fieldset class="last">
+                            <input placeholder="名" id="name2" type="text" tabindex="2" required maxlength="20">
+                        </fieldset>
+                    </div>
+                    <fieldset>
+                        <input placeholder="邮箱" id="email" type="email" tabindex="3" required maxlength="30">
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="手机号码 (选填)" id="phone" type="tel" tabindex="4" maxlength="15">
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="标题" id="title" type="text" tabindex="5" required maxlength="40">
+                    </fieldset>
+                    <fieldset>
+                        <textarea placeholder="留言内容" id="content" tabindex="6" required maxlength="500"></textarea>
+                    </fieldset>
+                    <fieldset class="buttons">
+                        <p id="messageSent" style="padding:10px;display:none"><b>提交成功!</b></p>
+                        <div name="cancelButton" id="contact-cancel" onclick="{cancelForm()}">取消</div>
+                        <button name="submitButton" type="submit" id="contact-submit">提交</button>
+                    </fieldset>
+              </form>
+          </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/feedback.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript">
-    window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "0", "bdSize": "32" }, "share": {} };
-    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
-
-    var langindex = 0;
-    window.setInterval(looptext, 3500);
-
-    function looptext() {
-        $(".langtext").hide();
-        $(".lang" + langindex).show();
-        var langup1 = {
-            '-webkit-transform': "rotateX(180deg)",
-            '-moz-transform': "rotateX(180deg)",
-            '-ms-transform': "rotateX(180deg)",
-            '-o-transform': "rotateX(180deg)",
-            'transform': "rotateX(180deg)"
-        };
-        $(".lang" + langindex).css(langup1);
-
-        var langtr1 = {
-            '-webkit-transition-duration': '1000ms',
-            'transition-duration': '1000ms'
-        };
-        $(".lang" + langindex).css(langtr1);
-
-        $(".lang" + (langindex + 1)).show();
-        var langdw2 = {
-            '-webkit-transform': "rotateX(180deg)",
-            '-moz-transform': "rotateX(180deg)",
-            '-ms-transform': "rotateX(180deg)",
-            '-o-transform': "rotateX(180deg)",
-            'transform': "rotateX(180deg)"
-        };
-        $(".lang" + (langindex + 1)).css(langdw2);
-
-        var langtr2 = {
-            '-webkit-transition-duration': '1000ms',
-            'transition-duration': '1000ms'
-        };
-        $(".lang" + (langindex + 1)).css(langtr2);
-
-        if (langindex == 5) {
-            langindex = 0;
-        }
-        langindex++;
+    function sendContactForm(){
+        setTimeout('$("#messageSent").show()', 500);
+        setTimeout('$(".feedback").slideUp("slow")', 1500);
+        setTimeout('$(".shadow").hide();', 2000);
     }
     $(function() {
-
+        $('#contact').submit(function () {
+         sendContactForm();
+         //$("#contact").reset();
+         return false;
+        });
+        $(".shadow").click(function(){
+            $(".feedback").hide();
+            $(".shadow").hide();
+        })
+        $("#feedbackButton ").click(function(){
+            cancelForm();
+            $(".shadow").show();
+            $(".feedback ").show();
+        })
         $(".main1").mouseover(function() {
             $(".main1info ").hide();
             $(".main1back ").show();
@@ -707,17 +815,17 @@
             $(".langselect").hide();
             $(".starthere").show();
         });
-        $(".chinatext").mouseover(function() {
-            $(".chinatext").css("color", "#FFFFFF");
-            $(".chinatext").css("background", "rgba(0, 102, 204, 1)");
+        $(".china").mouseover(function() {
+            $(".china").css("color", "#FFFFFF");
+            $(".china").css("background", "rgba(0, 102, 204, 1)");
             $(".english ").css("color", "#0066CC");
             $(".english").css("background", "#FFFFFF");
         });
         $(".english").mouseover(function() {
             $(".english ").css("color", "#FFFFFF");
             $(".english").css("background", "rgba(0, 102, 204, 1)");
-            $(".chinatext ").css("color", "#0066CC");
-            $(".chinatext").css("background", "#FFFFFF");
+            $(".china ").css("color", "#0066CC");
+            $(".china").css("background", "#FFFFFF");
         });
     })
     </script>
