@@ -97,12 +97,15 @@
     }
 
     .xian {
-        text-align: left;
+        text-align: justify;
+        line-height:1.3em;
         width: 100%;
         font-size: 10px;
     }
 
     .deal {
+        display:flex;
+        justify-content: center;
         font-size: 12px;
         margin-top: 15px;
     }
@@ -318,7 +321,7 @@
 <body>
     <div class="head">
         <div class="headtop">
-            <div class="headLogo">
+            <div class="headerLogo">
                 <a title = "返回首页" href="index.html" ><img style='height:32.8px; width:166.8px; margin-left:20px; ' src="img/logo.png"></a>
                 <a title = "switch to English" href="interEn.html" class="lang">中文/Eng</a>
             </div>
@@ -370,8 +373,9 @@
                     <p class="xian">4. 本平台的技术提供方属于非医疗机构，不同于医院的病例会诊，诊断结果不能作为医院就诊的依据和凭证。</p>
                     <p class="xian">5. 一切诊疗行为请在就诊医院执业医师指导下执行，造成的一切后果与本平台无关。</p>
                     <p class="xian">6. 本平台由Dr Lotus AI提供技术支持，解释权归技术提供方。</p>
-                    <p class="deal">&nbsp;
-                        <input value="checkbox" type="checkbox" name="deal" id="deal">&nbsp;我已阅读并同意本网站的使用条款和隐私政策</p>
+                    <div class="deal">&nbsp;
+                        <input value="checkbox" type="checkbox" name="deal" id="deal">&nbsp;我已阅读并同意本网站的使用条款和隐私政策
+                    </div>
                 </div>
                 <div class="bar">
                     <p class="bartext">Dr Lotus AI 正在判读中......</p>

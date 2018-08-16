@@ -103,12 +103,15 @@
     }
 
     .xian {
-        text-align: left;
+        text-align: justify;
+        line-height: 1.3em;
         width: 100%;
         font-size: 10px;
     }
 
     .deal {
+        display: flex;
+        justify-content: center;
         font-size: 12px;
         margin-top: 15px;
     }
@@ -326,7 +329,7 @@
 <body>
     <div class="head">
         <div class="headtop">
-            <div class="headLogo">
+            <div class="headerLogo">
                 <a title = "return to Homepage" href="indexEn.html" class="med"><img style='height:32.8px; width:166.8px; margin-left:20px; ' src="img/logo.png"></a>
                 <a title = "切换成中文" href="inter.html" class="lang">中文/Eng</a>
             </div>
@@ -356,8 +359,9 @@
                     <p class="xian">4. The technical provider of this platform belongs to non-medical institutions. The interpretation results cannot be used as a basis for hospital visits.</p>
                     <p class="xian">5. All medical treatments should be carried out under the guidance of doctors, and all consequences will be irrelevant to this platform.</p>
                     <p class="xian">6. This platform reserves all rights not expressly granted to you.</p>
-                    <p class="deal">&nbsp;
-                        <input value="checkbox" type="checkbox" name="deal" id="deal">&nbsp;By checking the box, I have read the above Disclaimer.</p>
+                    <div class="deal">&nbsp;
+                        <input value="checkbox" type="checkbox" name="deal" id="deal">&nbsp;By checking the box, I have read the above Disclaimer.
+                    </div>
                 </div>
                 <div class="bar">
                     <p class="bartext">Dr Lotus AI is interpreting......</p>
@@ -450,7 +454,7 @@
     </div>
     <div class="foot">
         <div class="footline">
-            <span class="banquan">Copyright©2018 MedVisionCloud</span><span class="fonttext">Powered by Dr Lotus AI Medical Image Interpretation Engine</span><span id="feedbackButton" class="message">Feedback</span></div>
+            <span class="banquan">Copyright©2018 MedVisionCloud</span><span class="fonttextEn">Powered by Dr Lotus AI Medical Image Interpretation Engine</span><span id="feedbackButton" class="message">Feedback</span></div>
     </div>
     <div class="shadow">
     </div>

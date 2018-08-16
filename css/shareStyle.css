@@ -56,6 +56,35 @@
 #share a.share5 {
     background: #117dc2;
 }
+.wechatShare2{
+    border: 1px solid rgb(216, 216, 216);
+    position:absolute;
+    top: 250px;
+    left: 65px;
+    width:240px;
+    height: 275px;
+    display:flex;
+    padding: 10px;
+    flex-direction: column;
+    background:#FFF;
+    align-items:center;
+    z-index:4;
+    display:none;
+}
+.wechatShare2 .popup_head{
+    font-weight:700;
+    font-size:12px;
+    width:240px;
+    height:16px;
+}
+.wechatShare2 .popup_foot{
+    margin-top:5px;
+    width:240px;
+    height:44px;
+    font-size:12px;
+    color: rgb(102,102,102);
+
+}
 .wechatShare{
     border: 1px solid rgb(216, 216, 216);
     position:absolute;
