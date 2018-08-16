@@ -1,68 +1,75 @@
-var lastname = document.getElementById("name1");
-lastname.addEventListener("input", function (event) {
-    if (lastname.validity.valueMissing) {
-        lastname.setCustomValidity("Please enter your last name");
-    } else {
-        lastname.setCustomValidity("");
+document.addEventListener("DOMContentLoaded", function() {
+    var lastname = document.getElementById("name1");
+    lastname.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("Please enter your last name");
+        }
     }
-});
+    lastname.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
+    var firstname = document.getElementById("name2");
+    firstname.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("Please enter your first name");
+        }
+    }
+    firstname.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
-var firstname = document.getElementById("name2");
+    var email = document.getElementById("email");
+    email.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(e.target.validity.valueMissing){
+            e.target.setCustomValidity("Please enter your email");
+        }
+        else if(e.target.validity.typeMismatch){
+            e.target.setCustomValidity("Please enter a valid email address")
+        }
+    }
+    email.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
-firstname.addEventListener("input", function (event) {
-  if (firstname.validity.valueMissing) {
-    firstname.setCustomValidity("Please enter your first name");
-  } else {
-    firstname.setCustomValidity("");
-  }
-});
+    var phone = document.getElementById("phone");
+    phone.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("Please enter a valid phone number");
+        }
+    }
+    phone.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
+    var title = document.getElementById("title");
+    title.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("Please enter a title");
+        }
+    }
+    title.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
-var email = document.getElementById("email");
-
-email.addEventListener("input", function (event) {
-  if (email.validity.valueMissing) {
-    email.setCustomValidity("Please enter your email address");
-  }
-  else if (email.validity.typeMismatch) {
-    email.setCustomValidity("Please enter a valid email address");
-  } else {
-    email.setCustomValidity("");
-  }
-});
-
-
-var phone = document.getElementById("phone");
-
-phone.addEventListener("input", function (event) {
-  if (phone.validity.valueMissing) {
-    phone.setCustomValidity("Please enter your phone number");
-  }else if (email.validity.typeMismatch) {
-    email.setCustomValidity("Please enter a valid phone number");
-  } else {
-    phone.setCustomValidity("");
-  }
-});
-
-
-var content = document.getElementById("content");
-
-content.addEventListener("input", function (event) {
-  if (content.validity.valueMissing) {
-    content.setCustomValidity("Please leave a message");
-  } else {
-    content.setCustomValidity("");
-  }
-});
-
-
-
-
+    var content = document.getElementById("content");
+    content.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("Please leave a message");
+        }
+    }
+    content.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
+})
 
 function cancelForm() {
-   // Get the first form with the name
-   // Hopefully there is only one, but there are more, select the correct index
    var frm = document.getElementById("contact");
    frm.reset();  // Reset
    $(".shadow").hide();

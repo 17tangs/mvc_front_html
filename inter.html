@@ -117,12 +117,14 @@
     }
 
     .medmain {
-        width: 1500px;
+        display:flex;
+        justify-content: center;
         margin: 90px auto;
         margin-bottom:150px;
     }
 
     .inter {
+        width:1375px;
         margin-top: 40px;
         display:flex;
     }
@@ -159,6 +161,7 @@
     }
 
     .inter_center {
+        position:relative;
         display:flex;
         flex-direction: column;
         align-items: center;
@@ -199,7 +202,7 @@
         border-radius: 5px;
         display: block;
         margin: 0 auto;
-        margin-top: 25px;
+        margin-top: 5px;
         text-decoration: none;
     }
 
@@ -208,7 +211,7 @@
     }
 
     .help {
-        margin-top: 70px;
+        margin-top: 20px;
         text-align: center;
         color: #0066CC;
     }
@@ -427,7 +430,7 @@
 
     .hintstr {
         text-align: center;
-        margin-top: 30px;
+        height: 30px;
         color: red;
     }
 
@@ -462,8 +465,37 @@
         height:44px;
         font-size:12px;
         color: rgb(102,102,102);
+    }
+    .wechatShare2{
+        border: 1px solid rgb(216, 216, 216);
+        position:absolute;
+        top: 255px;
+        left: 23px;
+        width:240px;
+        height: 275px;
+        display:flex;
+        padding: 10px;
+        flex-direction: column;
+        background:#FFF;
+        align-items:center;
+        z-index:4;
+        display:none;
+    }
+    .wechatShare2 .popup_head{
+        font-weight:700;
+        font-size:12px;
+        width:240px;
+        height:16px;
+    }
+    .wechatShare2 .popup_foot{
+        margin-top:5px;
+        width:240px;
+        height:44px;
+        font-size:12px;
+        color: rgb(102,102,102);
 
     }
+
     </style>
 </head>
 
@@ -476,11 +508,11 @@
             </div>
             <div id="share">
                 <div class="bdsharebuttonbox" >
-                    <a href="#" class="bds_weixin share1" id="wechat" ><img src="img/share1.png"></a>
-                    <a href="http://service.weibo.com/share/share.php?url=http://medvisioncloud.com&appkey=&title=Description&pic=&ralateUid=&language=zh_cn#_loginLayer_1534360232084" target = "_blank" class="share2" ><img src="img/share2.png"></a>
-                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//medvisioncloud.com" class="share3" ><img src="img/share3.png"></a>
-                    <a target="_blank" href="https://twitter.com/home?status=http%3A//medvisioncloud.com" class="share4" ><img src="img/share4.png"></a>
-                    <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//medvisioncloud.com&title=Medvision%20Cloud&summary=&source=" class="share5"> <img src="img/share5.png"></a>
+                    <a title="分享到微信" href="#" class="bds_weixin share1" id="wechat" ><img src="img/share1.png"></a>
+                    <a title="分享到微博" href="http://service.weibo.com/share/share.php?url=http://medvisioncloud.com&appkey=&title=Description&pic=&ralateUid=&language=zh_cn#_loginLayer_1534360232084" target = "_blank" class="share2" ><img src="img/share2.png"></a>
+                    <a title="分享到脸书" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//medvisioncloud.com" class="share3" ><img src="img/share3.png"></a>
+                    <a title="分享到推特" target="_blank" href="https://twitter.com/home?status=http%3A//medvisioncloud.com" class="share4" ><img src="img/share4.png"></a>
+                    <a title="分享到领英" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//medvisioncloud.com&title=Medvision%20Cloud&summary=&source=" class="share5"> <img src="img/share5.png"></a>
                 </div>
             </div>
         </div>
@@ -503,6 +535,16 @@
                 <input type="file" id="fileup" class="fileup" name="file">
             </div>
             <div class="inter_center">
+                <div class="wechatShare2">
+                    <div class="popup_head">
+                        <span>分享到微信朋友圈</span>
+                    </div>
+                    <img style='height:215px; width:215px' src="img/QR.png">
+                    <div class="popup_foot">
+                        打开微信，点击底部的“发现”，<br>
+                        使用“扫一扫”即可将网页分享至朋友圈。
+                    </div>
+                </div>
                 <div class="shenmin">
                     <p class="be">免责声明</p>
                     <p class="xian des">MedVisionCloud旨在向普通用户提供一个免费的医疗影像人工智能判读的平台。根据我国法律，本平台特做如下声明：</p>
@@ -522,17 +564,17 @@
                 <div class="info">
                     <p class="hintstr"> </p>
                     <a href="javascript:void(0)" class="interput">开始判读</a>
-                    <div id="share">
-                        <div class="bdsharebuttonbox" >
-                            <a href="#" class="bds_weixin share1" id="wechat2" ><img src="img/share1.png"></a>
-                            <a href="http://service.weibo.com/share/share.php?url=http://medvisioncloud.com&appkey=&title=Description&pic=&ralateUid=&language=zh_cn#_loginLayer_1534360232084" target = "_blank" class="share2" ><img src="img/share2.png"></a>
-                            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//medvisioncloud.com" class="share3" ><img src="img/share3.png"></a>
-                            <a target="_blank" href="https://twitter.com/home?status=http%3A//medvisioncloud.com" class="share4" ><img src="img/share4.png"></a>
-                            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//medvisioncloud.com&title=Medvision%20Cloud&summary=&source=" class="share5"> <img src="img/share5.png"></a>
-                        </div>
-                    </div>
                     <p class="help">觉得有帮助？</p>
                     <p class="shared">请把我们分享给更多有需要的人</p>
+                    <div id="share">
+                        <div class="bdsharebuttonbox" >
+                            <a title="分享到微信" href="#" class="bds_weixin share1" id="wechat2" ><img src="img/share1.png"></a>
+                            <a title="分享到微博" href="http://service.weibo.com/share/share.php?url=http://medvisioncloud.com&appkey=&title=Description&pic=&ralateUid=&language=zh_cn#_loginLayer_1534360232084" target = "_blank" class="share2" ><img src="img/share2.png"></a>
+                            <a title="分享到脸书" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//medvisioncloud.com" class="share3" ><img src="img/share3.png"></a>
+                            <a title="分享到推特" target="_blank" href="https://twitter.com/home?status=http%3A//medvisioncloud.com" class="share4" ><img src="img/share4.png"></a>
+                            <a title="分享到领英" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//medvisioncloud.com&title=Medvision%20Cloud&summary=&source=" class="share5"> <img src="img/share5.png"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="inter_right">
@@ -655,7 +697,17 @@
     <script type="text/javascript" src="js/circleChart.min.js"></script>
     <script type="text/javascript">
     var date = {};
+    function sendContactForm(){
+        setTimeout('$("#messageSent").show()', 500);
+        setTimeout('$(".feedback").slideUp("slow")', 1500);
+        setTimeout('$(".shadow").hide();', 2000);
+    }
     $(function() {
+        $('#contact').submit(function () {
+         sendContactForm();
+         //$("#contact").reset();
+         return false;
+        });
         $('#wechat').mouseover(function(){
             $(".wechatShare").css('display', 'flex');
         })
@@ -663,10 +715,10 @@
             $(".wechatShare").hide();
         })
         $('#wechat2').mouseover(function(){
-            $(".wechatShare").css('display', 'flex');
+            $(".wechatShare2").css('display', 'flex');
         })
         $('#wechat2').mouseout(function(){
-            $(".wechatShare").hide();
+            $(".wechatShare2").hide();
         })
         $("#feedbackButton ").click(function(){
             //cancelForm();
@@ -759,7 +811,7 @@
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.log(textStatus);
                 }
-            });           
+            });
         });
 
         $(".hidehot").click(function() {
@@ -823,7 +875,7 @@
                     $(".interput").text("重新判读");
                     if (data.types != undefined) {
                          date.types = data.types[0];
-                    }          
+                    }
 
                     if (data.flag) {
                         if (data.flag == 1) {

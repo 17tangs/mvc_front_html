@@ -1,69 +1,75 @@
-var lastname = document.getElementById("name1");
-
-lastname.addEventListener("input", function (event) {
-    if (lastname.validity.valueMissing) {
-        lastname.setCustomValidity("请填写姓");
-    } else {
-        lastname.setCustomValidity("");
+document.addEventListener("DOMContentLoaded", function() {
+    var lastname = document.getElementById("name1");
+    lastname.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("请填写姓");
+        }
     }
-});
+    lastname.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
+    var firstname = document.getElementById("name2");
+    firstname.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("请填写名");
+        }
+    }
+    firstname.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
-var firstname = document.getElementById("name2");
+    var email = document.getElementById("email");
+    email.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(e.target.validity.valueMissing){
+            e.target.setCustomValidity("请填写邮箱");
+        }
+        else if(e.target.validity.typeMismatch){
+            e.target.setCustomValidity("请填写有效的邮箱")
+        }
+    }
+    email.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
-firstname.addEventListener("input", function (event) {
-  if (firstname.validity.valueMissing) {
-    firstname.setCustomValidity("请填写名");
-  } else {
-    firstname.setCustomValidity("");
-  }
-});
+    var phone = document.getElementById("phone");
+    phone.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("请填写手机号码");
+        }
+    }
+    phone.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
+    var title = document.getElementById("title");
+    title.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("请填写标题");
+        }
+    }
+    title.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
 
-var email = document.getElementById("email");
-
-email.addEventListener("input", function (event) {
-  if (email.validity.valueMissing) {
-    email.setCustomValidity("请填写邮箱");
-  }
-  else if (email.validity.typeMismatch) {
-    email.setCustomValidity("请填写有效的邮箱");
-  } else {
-    email.setCustomValidity("");
-  }
-});
-
-
-var phone = document.getElementById("phone");
-
-phone.addEventListener("input", function (event) {
-  if (phone.validity.valueMissing) {
-    phone.setCustomValidity("请填写手机号码");
-  }else if (email.validity.typeMismatch) {
-    email.setCustomValidity("请填写有效的手机号码");
-  } else {
-    phone.setCustomValidity("");
-  }
-});
-
-
-var content = document.getElementById("content");
-
-content.addEventListener("input", function (event) {
-  if (content.validity.valueMissing) {
-    content.setCustomValidity("请填写留言");
-  } else {
-    content.setCustomValidity("");
-  }
-});
-
-
-
-
+    var content = document.getElementById("content");
+    content.oninvalid = function(e) {
+        e.target.setCustomValidity("");
+        if(!e.target.validity.valid){
+            e.target.setCustomValidity("请填写留言");
+        }
+    }
+    content.oninput = function(e){
+        e.target.setCustomValidity("");
+    }
+})
 
 function cancelForm() {
-   // Get the first form with the name
-   // Hopefully there is only one, but there are more, select the correct index
    var frm = document.getElementById("contact");
    frm.reset();  // Reset
    $(".shadow").hide();
