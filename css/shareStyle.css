@@ -1,0 +1,87 @@
+.bdsharebuttonboxEn {
+    width: 150px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.bdsharebuttonbox {
+    width: 248px;
+    display:flex;
+    justify-content: space-between;
+}
+#share {
+    margin-right:12px;
+    height: 64px;
+    display: inline-block;
+}
+#share a{
+    width: 32.8px;
+    height: 32.8px;
+    border-radius: 32.8px;
+    display: inline-block;
+    margin-left: 8px;
+    margin-right:8px;
+    margin-top: 15px;
+}
+#share a.bds_weixin{
+    display:flex;
+    justify-content: center;
+    background: rgb(0,0,0,0);
+}
+#share img {
+    margin: 0 auto;
+    margin-top: 10px;
+    display: block;
+}
+
+#share a.share1{
+    background-color: #2dc100;
+}
+#share a.share1 img{
+    height:14px;
+    width:20px;
+}
+#share a.share2 {
+    background: #eb192d;
+}
+
+#share a.share3 {
+    background: #2f4d9e;
+}
+
+#share a.share4 {
+    background: #569ed5;
+}
+
+#share a.share5 {
+    background: #117dc2;
+}
+.wechatShare{
+    border: 1px solid rgb(216, 216, 216);
+    position:absolute;
+    top: 80px;
+    right: 95px;
+    width:240px;
+    height: 275px;
+    display:flex;
+    padding: 10px;
+    flex-direction: column;
+    background:#FFF;
+    align-items:center;
+    z-index:4;
+    display:none;
+}
+.wechatShare .popup_head{
+    font-weight:700;
+    font-size:12px;
+    width:240px;
+    height:16px;
+}
+.wechatShare .popup_foot{
+    margin-top:5px;
+    width:240px;
+    height:44px;
+    font-size:12px;
+    color: rgb(102,102,102);
+
+}

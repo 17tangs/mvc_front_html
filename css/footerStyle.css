@@ -1,0 +1,33 @@
+.foot {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    border-top: 1.5px solid #BBB;
+    line-height: 64px;
+}
+
+.footline {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.foot .banquan {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.foot .fonttext {
+    margin-right:154px;
+
+}
+
+.foot .message {
+    margin-right:20px;
+    cursor: pointer;
+    color: rgba(0, 102, 204, 1);
+}

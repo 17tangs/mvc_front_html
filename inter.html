@@ -7,6 +7,9 @@
     <meta name="keywords" content="华建医视云">
     <meta name="description" content="华建医视云">
     <link rel="stylesheet" type="text/css" href="./css/contactStyle.css">
+    <link rel="stylesheet" type="text/css" href="./css/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="./css/shareStyle.css">
+    <link rel="stylesheet" type="text/css" href="./css/footerStyle.css">
     <style type="text/css">
     * {
         margin: 0;
@@ -14,118 +17,24 @@
     }
 
     body {
+        width:100%;
+        height:100%;
+        min-width:875px;
         font-family: 'Arial Negreta', 'Arial';
         font-size: 14px;
-        background: #f2f2f2;
-    }
-
-    .head {
-        height: 64px;
-        width: 100%;
-        background: #FFFFFF;
-        position: fixed;
-        z-index: 1;
-        top: 0px;
-        box-shadow: 2px 2px 3px #AAAAAA;
-    }
-
-    .headtop {
-        display:flex;
-        align-items:center;
-        justify-content: space-between;
-        width: 100%;
-        margin: 0 auto;
-    }
-    .headLogo{
-        height:32.8px;
-        display:flex;
-        align-items: center;
-    }
-
-    .med {
-        display: inline-block;
-        float: left;
-    }
-
-    .lang {
-        color: #000000;
-        text-decoration: none;
-        margin-left: 30px;
-        font-size: 11px;
-        display: inline-block;
-    }
-    .lang:hover{
-        text-decoration:underline;
-    }
-
-    .bdsharebuttonbox {
-        width: 248px;
-        display:flex;
-        justify-content: space-between;
-    }
-    #share {
-        margin-right:12px;
-        float: right;
-        height: 64px;
-        display: inline-block;
-    }
-    #share a{
-        width: 32.8px;
-        height: 32.8px;
-        border-radius: 32.8px;
-        display: inline-block;
-        margin-left: 8px;
-        margin-right:8px;
-        margin-top: 15px;
-    }
-    #share a.bds_weixin{
-        display:flex;
-        justify-content: center;
-        background: rgb(0,0,0,0);
-    }
-
-    #share img {
-        margin: 0 auto;
-        margin-top: 10px;
-        display: block;
-    }
-
-    #share a.share1{
-        background-color: #2dc100;
-    }
-    #share a.share1 img{
-        height:14px;
-        width:20px;
-    }
-    #share a.share2 {
-        background: #eb192d;
-    }
-
-    #share a.share3 {
-        background: #2f4d9e;
-    }
-
-    #share a.share4 {
-        background: #569ed5;
-    }
-
-    #share a.share5 {
-        background: #117dc2;
-    }
-
-    #share a.bds_more {
-        display: none;
+        background: #fff;
     }
 
     .medmain {
         display:flex;
         justify-content: center;
-        margin: 90px auto;
-        margin-bottom:150px;
+        margin-top: 65px;
+        height:850px;
+        background-color:#f2f2f2;
     }
 
     .inter {
-        width:1375px;
+        width:1425px;
         margin-top: 40px;
         display:flex;
     }
@@ -158,6 +67,7 @@
 
     .inter_left img {
         display: block;
+        height:100%;
         width: 100%;
     }
 
@@ -167,10 +77,13 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 315px;
+        width: 400px;
         height: 616px;
         margin-left: 30px;
         margin-right: 30px;
+    }
+    .shenmin{
+        width:100%;
     }
 
     .be {
@@ -185,8 +98,8 @@
 
     .xian {
         text-align: left;
-        width: 315px;
-        font-size: 13px;
+        width: 100%;
+        font-size: 10px;
     }
 
     .deal {
@@ -366,46 +279,6 @@
         background-color: rgba(0, 153, 255, 1);
     }
 
-
-    .foot {
-        margin-top:75px;
-        font-size: 14px;
-        font-weight: 400;
-        color: #333333;
-        overflow: hidden;
-        width: 100%;
-        background: #f2f2f2;
-        border-top: 1.5px solid #BBB;
-        line-height: 64px;
-    }
-
-    .footline {
-        width:100%;
-        display:flex;
-        justify-content: space-between;
-        margin: 0 auto;
-    }
-
-    .foot .banquan {
-        display: inline-block;
-        margin-left: 20px;
-    }
-
-    .foot .fonttext {
-        margin-right:154px;
-
-    }
-
-    .foot .message {
-        margin-right:20px;
-        cursor: pointer;
-        color: #0066CC;
-    }
-
-    .foot .message:hover {
-        text-decoration: underline;
-    }
-
     .bar {
         margin-top: 125px;
         margin-bottom: 95px;
@@ -439,64 +312,6 @@
         width: 100%;
         display: block;
     }
-    .wechatShare{
-        border: 1px solid rgb(216, 216, 216);
-        position:absolute;
-        top: 80px;
-        right: 95px;
-        width:240px;
-        height: 275px;
-        display:flex;
-        padding: 10px;
-        flex-direction: column;
-        background:#FFF;
-        align-items:center;
-        z-index:4;
-        display:none;
-    }
-    .wechatShare .popup_head{
-        font-weight:700;
-        font-size:12px;
-        width:240px;
-        height:16px;
-    }
-    .wechatShare .popup_foot{
-        margin-top:5px;
-        width:240px;
-        height:44px;
-        font-size:12px;
-        color: rgb(102,102,102);
-    }
-    .wechatShare2{
-        border: 1px solid rgb(216, 216, 216);
-        position:absolute;
-        top: 255px;
-        left: 23px;
-        width:240px;
-        height: 275px;
-        display:flex;
-        padding: 10px;
-        flex-direction: column;
-        background:#FFF;
-        align-items:center;
-        z-index:4;
-        display:none;
-    }
-    .wechatShare2 .popup_head{
-        font-weight:700;
-        font-size:12px;
-        width:240px;
-        height:16px;
-    }
-    .wechatShare2 .popup_foot{
-        margin-top:5px;
-        width:240px;
-        height:44px;
-        font-size:12px;
-        color: rgb(102,102,102);
-
-    }
-
     </style>
 </head>
 
@@ -504,7 +319,7 @@
     <div class="head">
         <div class="headtop">
             <div class="headLogo">
-                <a title = "返回首页" href="index.html" class="med"><img style='height:32.8px; width:166.8px; margin-left:20px; ' src="img/logo.png"></a>
+                <a title = "返回首页" href="index.html" ><img style='height:32.8px; width:166.8px; margin-left:20px; ' src="img/logo.png"></a>
                 <a title = "switch to English" href="interEn.html" class="lang">中文/Eng</a>
             </div>
             <div id="share">
