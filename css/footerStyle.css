@@ -4,6 +4,7 @@
     color: #333333;
     overflow: hidden;
     width: 100%;
+    position:relative;
     background: #fff;
     border-top: 1.5px solid #BBB;
     line-height: 64px;
@@ -15,18 +16,17 @@
     justify-content: space-between;
     margin: 0 auto;
 }
+.footline2{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    position:absolute;
+    bottom:0;
+}
 
 .foot .banquan {
     display: inline-block;
     margin-left: 20px;
-}
-
-.foot .fonttext {
-    margin-right:154px;
-
-}
-.foot .fonttextEn {
-    margin-right:100px;
 }
 
 .foot .message {

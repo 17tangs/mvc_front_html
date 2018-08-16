@@ -29,21 +29,21 @@
         display:flex;
         justify-content: center;
         margin-top: 65px;
-        height:850px;
+        height:820px;
         background-color:#f2f2f2;
     }
 
     .inter {
-        width:1425px;
+        width:1460px;
         margin-top: 40px;
         display:flex;
     }
 
     .inter_left {
         float: left;
-        width: 500px;
+        min-width: 500px;
+        max-width: 500px;
         height: 616px;
-        overflow: auto;
         background: #FFFFFF;
         cursor: pointer;
     }
@@ -68,7 +68,7 @@
     .inter_left img {
         display: block;
         height:100%;
-        width: 100%;
+        width: 500px;
     }
 
     .inter_center {
@@ -472,7 +472,12 @@
     </div>
     <div class="foot">
         <div class="footline">
-            <span class="banquan">Copyright©2018 MedVisionCloud</span><span class="fonttext">感谢 Dr Lotus AI 医疗影像人工智能判读引擎 提供技术支持</span><span id="feedbackButton" class="message">留言反馈</span></div>
+            <span class="banquan">Copyright©2018 MedVisionCloud</span>
+            <span id="feedbackButton" class="message">留言反馈</span>
+        </div>
+        <div class="footline2">
+            <span class="fonttext">感谢 Dr Lotus AI 医疗影像人工智能判读引擎 提供技术支持</span>
+        </div>
     </div>
     <div class="shadow">
     </div>
