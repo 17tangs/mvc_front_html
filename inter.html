@@ -6,6 +6,7 @@
     <title>华建医视云</title>
     <meta name="keywords" content="华建医视云">
     <meta name="description" content="华建医视云">
+    <link rel="stylesheet" type="text/css" href="./css/contactStyle.css">
     <style type="text/css">
     * {
         margin: 0;
@@ -326,12 +327,8 @@
     }
 
     .hotimg {
-        float: left;
         position: absolute;
-        margin: 0 auto;
         top: 0;
-        width: 500px;
-        z-index: 999;
         display: none;
     }
 
@@ -475,7 +472,7 @@
         <div class="headtop">
             <div class="headLogo">
                 <a title = "返回首页" href="index.html" class="med"><img style='height:32.8px; width:166.8px; margin-left:20px; ' src="img/logo.png"></a>
-                <a title = "switch to English" href="javascript:void(0)" class="lang">中文/Eng</a>
+                <a title = "switch to English" href="interEn.html" class="lang">中文/Eng</a>
             </div>
             <div id="share">
                 <div class="bdsharebuttonbox" >
@@ -605,7 +602,7 @@
                     <a href="javascript:void(0)" class="hot">点击查看热力图，看看Dr Lotus AI还辨识出了什么。</a>
                 </div>
                 <div class="hotimg">
-                    <img src="img/hotimg.jpg">
+                    <img src="">
                     <a href="javascript:void(0)" class="hidehot">隐藏热力图</a>
                 </div>
             </div>
@@ -613,9 +610,48 @@
     </div>
     <div class="foot">
         <div class="footline">
-            <span class="banquan">Copyright©2018 MedVisionCloud</span><span class="fonttext">感谢 Dr Lotus AI 医疗影像人工智能判读引擎 提供技术支持</span><a href="javascript:void(0)" class="message">留言反馈</a></div>
+            <span class="banquan">Copyright©2018 MedVisionCloud</span><span class="fonttext">感谢 Dr Lotus AI 医疗影像人工智能判读引擎 提供技术支持</span><span id="feedbackButton" class="message">留言反馈</span></div>
+    </div>
+    <div class="shadow">
+    </div>
+    <div class="feedback">
+        <div class="container">
+            <div class="feedbackHeader">
+                <h3>告诉我们你的想法</h3>
+            </div>
+                <div class="contactContainer">
+                <form id="contact" method="POST">
+                    <div class="name">
+                        <fieldset class="first">
+                            <input placeholder="姓" id="name1" type="text" tabindex="1" required maxlength="20">
+                        </fieldset>
+                        <fieldset class="last">
+                            <input placeholder="名" id="name2" type="text" tabindex="2" required maxlength="20">
+                        </fieldset>
+                    </div>
+                    <fieldset>
+                        <input placeholder="邮箱" id="email" type="email" tabindex="3" required maxlength="30">
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="手机号码 (选填)" id="phone" type="tel" tabindex="4" maxlength="15">
+                    </fieldset>
+                    <fieldset>
+                        <input placeholder="标题" id="title" type="text" tabindex="5" required maxlength="40">
+                    </fieldset>
+                    <fieldset>
+                        <textarea placeholder="留言内容" id="content" tabindex="6" required maxlength="500"></textarea>
+                    </fieldset>
+                    <fieldset class="buttons">
+                        <p id="messageSent" style="padding:10px;display:none"><b>提交成功!</b></p>
+                        <div name="cancelButton" id="contact-cancel" onclick="{cancelForm()}">取消</div>
+                        <button name="submitButton" type="submit" id="contact-submit">提交</button>
+                    </fieldset>
+              </form>
+          </div>
+        </div>
     </div>
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/feedback.js"></script>
     <script type="text/javascript" src="js/circleChart.min.js"></script>
     <script type="text/javascript">
     var date = {};
@@ -631,6 +667,11 @@
         })
         $('#wechat2').mouseout(function(){
             $(".wechatShare").hide();
+        })
+        $("#feedbackButton ").click(function(){
+            //cancelForm();
+            $(".shadow").show();
+            $(".feedback ").show();
         })
         function nowuploadFile(formData) {
             $.ajax({
@@ -698,8 +739,29 @@
         });
 
         $(".hot").click(function() {
-            $(".hotimg").show();
+            $.ajax({
+                url: "http://75.150.96.188:8763/Log/heatMap",
+                type: 'POST',
+                data: JSON.stringify({"fileId" : date.fileId}),
+                contentType: "application/json",
+                success: function(data) {
+                    if (date.types == 'Calcification') {
+                        $(".hotimg img").attr("src",data.calcification_path);
+                        $(".hotimg").show();
+                    }else if (date.types == 'Mass') {
+                        $(".hotimg img").attr("src",data.mass_path);
+                        $(".hotimg").show();
+                    }else{
+                        $(".hotimg img").attr("src",data.calcification_path);
+                        $(".hotimg").show();
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.log(textStatus);
+                }
+            });           
         });
+
         $(".hidehot").click(function() {
             $(".hotimg").hide();
         });
@@ -759,6 +821,10 @@
                     $(".hint").hide();
                     $("#fileup").val("");
                     $(".interput").text("重新判读");
+                    if (data.types != undefined) {
+                         date.types = data.types[0];
+                    }          
+
                     if (data.flag) {
                         if (data.flag == 1) {
                             $(".result").hide();
