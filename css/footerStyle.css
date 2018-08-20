@@ -1,11 +1,11 @@
 .foot {
     font-size: 14px;
     font-weight: 400;
-    color: #333333;
+    color: #888888;
     width: 100%;
     position:relative;
     background: #fff;
-    border-top: 1.5px solid #BBB;
+    border-top: 1px solid #CCC;
     line-height: 64px;
 }
 

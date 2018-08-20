@@ -8,425 +8,7 @@
     <link rel="stylesheet" type="text/css" href="./css/headerStyle.css">
     <link rel="stylesheet" type="text/css" href="./css/shareStyle.css">
     <link rel="stylesheet" type="text/css" href="./css/footerStyle.css">
-    <style type="text/css">
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        width:100%;
-        height:100%;
-        min-width:875px;
-        font-family: 'Arial Negreta', 'Arial';
-        font-size: 14px;
-        background: #ffffff;
-    }
-
-
-    .medmain {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 74px;
-        display:flex;
-        flex-direction:column;
-    }
-
-    .banner {
-        position:relative;
-        height: 658px;
-    }
-    #banner{
-        position:absolute;
-        top:0px;
-        width:100%;
-        height:658px;
-        margin:0;
-        background: url(img/bg.jpg) no-repeat;
-        background-position: center top;
-        background-size: auto 100%;
-
-    }
-
-
-    .banner img {
-        display: block;
-        width: 100%;
-    }
-
-    .banner1 {
-        display: inline-block;
-        width: 329px;
-        opacity: 0.75;
-        float: left;
-        margin-top: 188px;
-    }
-
-    .banner2 {
-        color: #FFFFFF;
-        overflow: hidden;
-        text-align: center;
-        margin: 150px auto;
-        margin-bottom: 0px;
-        overflow: hidden;
-    }
-
-    .medlang {
-        height: 150px;
-        overflow: hidden;
-    }
-
-    .med1 {
-        font-size: 65px;
-        text-align:center;
-        font-weight: 700;
-        margin-bottom: 30px;
-
-    }
-
-    .med2 {
-        font-size: 24px;
-        margin-bottom: 30px;
-    }
-
-    .med3 {
-        font-size: 18px;
-        margin-bottom: 70px;
-    }
-
-    .med4 {
-        width: 210px;
-        height: 70px;
-        margin: 0 auto;
-        font-size: 16px;
-        color: #FFFFFF;
-        text-align: center;
-    }
-
-    .starthere {
-        background-color: rgba(0, 153, 255, 1);
-        border-radius: 5px;
-        height: 70px;
-        overflow: hidden;
-        display: block;
-    }
-
-    .starthere p {
-        padding-top: 15px;
-    }
-
-    .langselect {
-        overflow: hidden;
-        display: none;
-    }
-
-    .langselect .china {
-        display: inline-block;
-        text-decoration: none;
-        width: 105px;
-        height: 70px;
-        line-height: 70px;
-        background-color: rgba(0, 102, 204, 1);
-        border: none;
-        border-radius: 5px;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-        -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
-        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
-        color: #0066CC;
-    }
-
-    .langselect .english {
-        text-decoration: none;
-        display: inline-block;
-        width: 105px;
-        height: 70px;
-        line-height: 70px;
-        background-color: rgba(0, 102, 204, 1);
-        border: none;
-        border-radius: 5px;
-        border-top-left-radius: 0px;
-        border-bottom-left-radius: 0px;
-        -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
-        -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.349019607843137);
-        color: #0066CC;
-    }
-
-
-    .banner3 {
-        display: inline-block;
-        width: 637px;
-        margin: auto;
-        float: right;
-    }
-
-    .main {
-        margin: 0 auto;
-        margin-top: 60px;
-        color: #FFFFFF;
-        width: 1300px;
-        overflow: hidden;
-    }
-
-    .main img {
-        display: block;
-        width: 100%;
-    }
-
-    .main1 {
-        width: 760px;
-        height: 520px;
-        position: relative;
-        float: left;
-    }
-
-    .main1info {
-        position: absolute;
-        width: 760px;
-        height: 130px;
-        line-height: 130px;
-        background-color: rgba(0, 0, 0, 0.447058823529412);
-        bottom: 0px;
-    }
-
-    .main1info span {
-        display: block;
-        margin-left: 85px;
-        font-weight: 700;
-        font-size: 28px;
-    }
-
-    .main1back {
-        top: 0px;
-        background-color: rgba(0, 0, 0, 0.447058823529412);
-        position: absolute;
-        width: 760px;
-        height: 520px;
-        display: none;
-    }
-
-    .main1back p {
-        margin-left: 88px;
-    }
-
-    .about1 {
-        font-size: 28px;
-        font-weight: 700;
-        margin-top: 135px;
-    }
-
-    .about2 {
-        font-size: 20px;
-        margin-top: 25px;
-    }
-
-    .about3 {
-        margin-top: 20px;
-    }
-
-    .about4 {
-        margin-top: 20px;
-    }
-
-    .main2 {
-        float: left;
-        margin-left: 20px;
-    }
-
-    .main21 {
-        width: 520px;
-        height: 320px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .main21info {
-        width: 520px;
-        height: 80px;
-        line-height: 80px;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.447058823529412);
-        bottom: 0px;
-    }
-
-    .main21info span {
-        display: block;
-        margin-left: 25px;
-        font-size: 28px;
-        font-weight: 700;
-    }
-
-    .main21back {
-        top: 0px;
-        background-color: rgba(0, 0, 0, 0.447058823529412);
-        position: absolute;
-        width: 520px;
-        height: 320px;
-        font-size: 12px;
-        display: none;
-    }
-
-    .main21back p {
-        margin-left: 25px;
-        width: 465px;
-    }
-
-    .state1 {
-        margin-top: 40px;
-        font-size: 28px;
-        font-weight: 700;
-    }
-
-    .state2 {
-        margin-top: 10px;
-    }
-
-    .state3 {
-        margin-top: 10px;
-    }
-
-    .main22 {
-        margin-top: 20px;
-        overflow: hidden;
-    }
-
-    .main221 {
-        width: 250px;
-        height: 180px;
-        float: left;
-        position: relative;
-    }
-
-    .main221info {
-        width: 250px;
-        height: 60px;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.447058823529412);
-        bottom: 0px;
-        margin-top: 10px;
-    }
-
-    .main221info span {
-        display: block;
-        margin-top: 10px;
-        margin-left: 5px;
-        font-weight: 700;
-    }
-
-    .main221back {
-        top: 0px;
-        background-color: rgba(0, 0, 0, 0.447058823529412);
-        position: absolute;
-        width: 250px;
-        height: 180px;
-        line-height: 180px;
-        font-size: 16px;
-        display: none;
-    }
-
-    .main221back a {
-        display: block;
-        text-align: center;
-        text-decoration: none;
-        color: #FFFFFF;
-    }
-
-    .main222 {
-        width: 250px;
-        height: 180px;
-        margin-left: 20px;
-        float: left;
-        position: relative;
-    }
-
-    .main222info {
-        width: 250px;
-        height: 60px;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.447058823529412);
-        bottom: 0px;
-    }
-
-    .main222info span {
-        display: block;
-        margin-left: 5px;
-        margin-top: 10px;
-        font-weight: 700;
-    }
-
-    .main222back {
-        top: 0px;
-        background-color: rgba(0, 0, 0, 0.447058823529412);
-        position: absolute;
-        width: 250px;
-        height: 180px;
-        line-height: 180px;
-        font-size: 16px;
-        display: none;
-    }
-
-    .main222back a {
-        display: block;
-        color: #FFFFFF;
-        text-decoration: none;
-        text-align: center;
-    }
-    .feedback{
-        z-index:3;
-        position:fixed;
-    }
-    .shadow{
-        width:100%;
-        height:1500px;
-        position:absolute;
-        top:0;
-        left:0;
-        background:rgba(0,0,0,0.5);
-        display:none;
-        z-index:2;
-    }
-    .message:hover{
-        text-decoration:underline;
-    }
-    .rw-words div{
-    	position: absolute;
-        left:0;
-        opacity: 0;
-    	overflow: hidden;
-    	width: 100%;
-    }
-
-    .rw-words-1 div{
-    	animation: rotateWordsFirst 18s linear infinite 0s;
-    }
-    .rw-words div:nth-child(2) {
-    	animation-delay: 3s;
-    }
-    .rw-words div:nth-child(3) {
-    	animation-delay: 6s;
-    }
-    .rw-words div:nth-child(4) {
-    	animation-delay: 9s;
-    }
-    .rw-words div:nth-child(5) {
-    	animation-delay: 12s;
-    }
-    .rw-words div:nth-child(6) {
-    	animation-delay: 15s;
-    }
-    @keyframes rotateWordsFirst {
-        0% { opacity: 0; }
-        2% { opacity: 0; -webkit-transform: translateY(-30px); transform: translateY(-30px); }
-    	5% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px);}
-        17% { opacity: 1; -webkit-transform: translateY(0px); transform: translateY(0px); }
-    	20% { opacity: 0; -webkit-transform: translateY(30px); transform: translateY(30px); }
-    	80% { opacity: 0; }
-        100% { opacity: 0; }
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./css/indexStyle.css">
 </head>
 
 <body>
@@ -502,40 +84,65 @@
                 </div>
             </div>
         </div>
-        <div class="main ">
-            <div class="main1 ">
-                <img src="img/u25.jpg ">
-                <div class="main1info ">
-                    <span>关于我们</span>
-                </div>
-                <div class="main1back ">
-                    <p class="about1 ">关于我们</p>
-                    <p class="about2 ">MedVisionCloud——女性健康医视云</p>
-                    <p class="about3 ">女性的健康，是人类社会发展的基石。MedVisionCloud致力于人工智能和医疗行业的深度融</p>
-                    <p>合，运用最前沿的人工智能技术，聚焦女性健康，旨在为全民提供免费的乳腺癌相关医疗影像</p>
-                    <p>人工智能辅助判读服务。</p>
-                    <p class="about4 ">MedVisionCloud由Dr Lotus AI 医疗影像人工智能判读引擎提供技术支持，帮助用户自助找到疑</p>
-                    <p>似病灶，同时分析患有恶性肿瘤的风险，为女性乳腺癌自测自查提供有价值的参考意见。</p>
+        <div class="main">
+            <div class="regionFull">
+                <div class="about">
+                    <!-- <div class="aboutTitle">
+                        <span>关于我们</span>
+                    </div> -->
+                    <div class="aboutInfo">
+                        <div class="aboutInfoText">
+                            <h1>关于我们</h1>
+                            <h2>MedVisionCloud——女性健康医视云</h2>
+                            <p>女性的健康，是人类社会发展的基石。MedVisionCloud致力于人工智能和医疗行业的深度融合，运用最前沿的人工智能技术，聚焦女性健康，旨在为全民提供免费的乳腺癌相关医疗影像人工智能辅助判读服务。</p>
+                            <p>MedVisionCloud由Dr Lotus AI 医疗影像人工智能判读引擎提供技术支持，帮助用户自助找到疑似病灶，同时分析患有恶性肿瘤的风险，为女性乳腺癌自测自查提供有价值的参考意见。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="main2 ">
-                <div class="main21 ">
-                    <img src="img/u16.jpg ">
-                    <div class="main21info ">
-                        <span>负责声明</span>
-                    </div>
-                    <div class="main21back ">
-                        <p class="state1 ">免责声明</p>
-                        <p class="state2 ">MedVisionCloud旨在向普通用户提供一个免费的医疗影像人工智能判读的平台。根据我国法律，本平台特做如下声明：</p>
-                        <p class="state3 ">1. 用户可自主自愿选择是否使用本平台进行医学影像智能判读。</p>
-                        <p>2. 用户上传的影像资料及检测结果仅做用户自测所用, 未经用户本人同意，平台无权也不会泄露给任何一方。 </p>
-                        <p>3. 经本平台判读的结果仅作为向用户本人提供参考，结果可能因影像清晰度、用户个人操作等存在误差，故确诊仍需专业影像医生鉴定。 </p>
-                        <p>4. 本平台的技术提供方属于非医疗机构，不同于医院的病例会诊，诊断结果不能作为医院就诊的依据和凭证。 </p>
-                        <p>5. 一切诊疗行为请在就诊医院执业医师指导下执行，造成的一切后果与本平台无关。 </p>
-                        <p>6. 本平台由Dr Lotus AI提供技术支持，解释权归技术提供方。</p>
+            <div class="regionFull">
+                <div class="regionSplitVL">
+                    <div class="title">
+                        <div id="companyNews">
+                            <h1>MVC 最新新闻</h1></br>
+                            <h3 style="font-weight:500;">关于华建医视云的最近动态</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="main22 ">
+                <div class="regionSplitVR">
+                    <div class="regionSplitVL2">
+                        <div class="card">
+                            <div class="headerImg" id="n1"></div>
+                            <div class="content">
+                                <h2>Dr Lotus AI 首次亮相中国卫生信息技术与健康医疗大数据应用交流大会</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="regionSplitVR2">
+                        <div class="card" >
+                            <div class="headerImg"id="n2"></div>
+                            <div class="content">
+                                <h2>Dr Lotus AI 首次亮相中国卫生信息技术与健康医疗大数据应用交流大会</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="claimRegion">
+                <div class="claim">
+                    <!-- <div class="claimTitle">
+                        <span>免责声明</span>
+                    </div> -->
+                    <div class="claimInfo">
+                        <p class="state1 ">免责声明</p>
+                        <p class="state2 ">MedVisionCloud旨在向普通用户提供一个免费的医疗影像人工智能判读的平台。根据我国法律，本平台特做如下声明：</p>
+                        <p class="state3 ">1. 用户可自主自愿选择是否使用本平台进行医学影像智能判读。2. 用户上传的影像资料及检测结果仅做用户自测所用, 未经用户本人同意，平台无权也不会泄露给任何一方。 </p>
+                        <p>3. 经本平台判读的结果仅作为向用户本人提供参考，结果可能因影像清晰度、用户个人操作等存在误差，故确诊仍需专业影像医生鉴定。 4. 本平台的技术提供方属于非医疗机构，不同于医院的病例会诊，诊断结果不能作为医院就诊的依据和凭证。 </p>
+                        <p>5. 一切诊疗行为请在就诊医院执业医师指导下执行，造成的一切后果与本平台无关。 6. 本平台由Dr Lotus AI提供技术支持，解释权归技术提供方。</p>
+                    </div>
+                </div>
+            </div>
+                <!-- <div class="main22 ">
                     <div class="main221 ">
                         <img src="img/u17.jpg ">
                         <div class="main221info ">
@@ -554,8 +161,7 @@
                             <a href="https://mp.weixin.qq.com/s/qQNyLgV46LgN0UGOeyyk8A" target="_blank">了解更多</a>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> -->
         </div>
     </div>
     <div class="foot">
@@ -634,30 +240,30 @@
             $(".shadow").show();
             $(".feedback ").show();
         })
-        $(".main1").mouseover(function() {
-            $(".main1info ").hide();
-            $(".main1back ").show();
-        });
-        $(".main1").mouseout(function() {
-            $(".main1back ").hide();
-            $(".main1info ").show();
-        });
-        $(".main21").mouseover(function() {
-            $(".main21info ").hide();
-            $(".main21back ").show();
-        });
-        $(".main21").mouseout(function() {
-            $(".main21back").hide();
-            $(".main21info").show();
-        });
-        $(".main221").mouseover(function() {
-            $(".main221info").hide();
-            $(".main221back").show();
-        });
-        $(".main221").mouseout(function() {
-            $(".main221back").hide();
-            $(".main221info").show();
-        });
+        // $(".about").mouseover(function() {
+        //     $(".aboutTitle ").hide();
+        //     $(".aboutInfo ").show();
+        // });
+        // $(".about").mouseout(function() {
+        //     $(".aboutInfo ").hide();
+        //     $(".aboutTitle ").show();
+        // });
+        // $(".claim").mouseover(function() {
+        //     $(".claimTitle").hide();
+        //     $(".claimInfo ").show();
+        // });
+        // $(".claim").mouseout(function() {
+        //     $(".claimInfo").hide();
+        //     $(".claimTitle").show();
+        // });
+        // $(".main221").mouseover(function() {
+        //     $(".main221info").hide();
+        //     $(".main221back").show();
+        // });
+        // $(".main221").mouseout(function() {
+        //     $(".main221back").hide();
+        //     $(".main221info").show();
+        // });
         $(".main222").mouseover(function() {
             $(".main222info").hide();
             $(".main222back").show();
