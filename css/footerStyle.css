@@ -1,10 +1,10 @@
 .foot {
     font-size: 14px;
     font-weight: 400;
-    color: #888888;
+    color: #888;
     width: 100%;
     position:relative;
-    background: #fff;
+    background: white;
     border-top: 1px solid #CCC;
     line-height: 64px;
 }
@@ -25,11 +25,14 @@
 
 .foot .banquan {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .foot .message {
-    margin-right:20px;
+    margin-right:30px;
     cursor: pointer;
     color: rgba(0, 102, 204, 1);
+}
+.message:hover{
+    text-decoration:underline;
 }

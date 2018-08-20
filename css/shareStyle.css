@@ -1,16 +1,16 @@
 .bdsharebuttonboxEn {
-    width: 150px;
+    width: 136px;
     display:flex;
     justify-content: space-between;
 }
 
 .bdsharebuttonbox {
-    width: 248px;
+    width: 224px;
     display:flex;
     justify-content: space-between;
 }
 #share {
-    margin-right:12px;
+    margin-right:24px;
     height: 64px;
     display: inline-block;
 }
@@ -19,8 +19,8 @@
     height: 32.8px;
     border-radius: 32.8px;
     display: inline-block;
-    margin-left: 8px;
-    margin-right:8px;
+    margin-left: 6px;
+    margin-right:6px;
     margin-top: 15px;
 }
 #share a.bds_weixin{
