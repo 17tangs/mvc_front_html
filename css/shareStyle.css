@@ -58,7 +58,7 @@
 }
 .wechatShare2{
     border: 1px solid rgb(216, 216, 216);
-    position:absolute;
+    position:fixed;
     top: 250px;
     left: 65px;
     width:240px;
@@ -87,7 +87,7 @@
 }
 .wechatShare{
     border: 1px solid rgb(216, 216, 216);
-    position:absolute;
+    position:fixed;
     top: 80px;
     right: 95px;
     width:240px;

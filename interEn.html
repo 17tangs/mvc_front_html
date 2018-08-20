@@ -41,7 +41,8 @@
         justify-content: center;
         margin-top: 65px;
         height:820px;
-        background-color:#f2f2f2;
+        background: url('./img/interBG.jpeg');
+        background-size: 100% auto;
     }
 
     .inter {
@@ -52,9 +53,9 @@
 
     .inter_left {
         float: left;
-        width: 500px;
+        min-width: 500px;
+        max-width: 500px;
         height: 616px;
-        overflow: auto;
         background: #FFFFFF;
         cursor: pointer;
     }
@@ -93,6 +94,10 @@
         margin-right: 30px;
     }
 
+    .shenmin{
+        margin-top:15px;
+        width:100%;
+    }
     .be {
         font-weight: 700;
         margin-bottom: 20px;
@@ -620,7 +625,7 @@
         });
 
         $(".inter_left").mouseover(function(eval) {
-            $(this).css("background", "rgba(0, 153, 255, 0.0784313725490196)");
+            $(this).css("background", "rgba(223, 235, 243, 1)");
         });
 
         $(".inter_left").mouseout(function(eval) {
