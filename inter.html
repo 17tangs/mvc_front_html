@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/headerStyle.css">
     <link rel="stylesheet" type="text/css" href="./css/shareStyle.css">
     <link rel="stylesheet" type="text/css" href="./css/footerStyle.css">
+    <link rel="stylesheet" type="text/css" href="./css/loading.css">
     <style type="text/css">
     * {
         margin: 0;
@@ -75,7 +76,6 @@
 
     .inter_center {
         color:white;
-        position:relative;
         display:flex;
         flex-direction: column;
         align-items: center;
@@ -290,7 +290,6 @@
         margin-top: 125px;
         margin-bottom: 95px;
         font-size: 20px;
-        color: #0066CC;
         text-align: center;
         display: none;
     }
@@ -299,14 +298,14 @@
         margin-top: 20px;
         height: 24px;
         width: 314px;
-        background: #FFFFFF;
+        background: rgba(0,0,0,0);
     }
 
     .line span {
         display: block;
         width: 0%;
         height: 24px;
-        background-color: rgba(0, 102, 204, 1);
+        background-color: rgba(0, 102, 204, 0);
     }
 
     .hintstr {
@@ -380,6 +379,20 @@
                     <div class="deal">&nbsp;
                         <input value="checkbox" type="checkbox" name="deal" id="deal">&nbsp;我已阅读并同意本网站的使用条款和隐私政策
                     </div>
+                </div>
+                <div class="sk-circle">
+                    <div class="sk-circle1 sk-child"></div>
+                  <div class="sk-circle2 sk-child"></div>
+                  <div class="sk-circle3 sk-child"></div>
+                  <div class="sk-circle4 sk-child"></div>
+                  <div class="sk-circle5 sk-child"></div>
+                  <div class="sk-circle6 sk-child"></div>
+                  <div class="sk-circle7 sk-child"></div>
+                  <div class="sk-circle8 sk-child"></div>
+                  <div class="sk-circle9 sk-child"></div>
+                  <div class="sk-circle10 sk-child"></div>
+                  <div class="sk-circle11 sk-child"></div>
+                  <div class="sk-circle12 sk-child"></div>
                 </div>
                 <div class="bar">
                     <p class="bartext">Dr Lotus AI 正在判读中......</p>
@@ -681,6 +694,7 @@
             }
             $(".hintstr").html('');
             $(".shenmin").hide();
+            $(".sk-circle").show();
             $(".bar").show();
             var begin = new Date();
             $.ajax({
@@ -688,12 +702,6 @@
                 type: 'post',
                 data: JSON.stringify(date),
                 contentType: "application/json",
-                beforeSend: function() {
-                    $(".line span").animate({ width: '90%' }, 3000);
-                },
-                complete: function() {
-                    $(".line span").animate({ width: '100%' }, 1000);
-                },
                 success: function(data) {
                     console.log(data);
                     var end = new Date();
